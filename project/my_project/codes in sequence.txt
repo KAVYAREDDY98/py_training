@@ -1,0 +1,31 @@
+#django/shell installation and URL creation
+
+django-admin startproject <project_name>
+python manage.py runserver
+crtl+c <- to stop the server
+
+django-admin startapp <app_name>
+#register app
+1. open apps.py file from appfolder copy 'classname' and 
+2. go to settings file in project and paste under installed apps 
+3. saying it is in app 'blog' and file 'apps' and paste the class
+eg:  blog.apps.BlogConfig
+
+Run the server after changes to see if you have any errors using -python manage.py runserver
+
+MVT Architecture
+Model - Database
+View - displaying data
+Template - 
+
+Working on views
+1. Open views in app 
+2. define a function
+3. To use html code import http respone using "from django.http import HttpResponse"
+
+Working on url
+1. create a new file called url under app
+2. copy paste url package that is alreay present in project url.py file
+3. Add from . import views package to display things present in views.py
+if you run the server now you get error saying the url of project is not correct
+4. so include 'blog.urls.py' path in project url file
