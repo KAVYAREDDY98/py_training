@@ -8,3 +8,27 @@
 5. git commit -m "Your custom message"
 6. git remote add origin <repo_link>
 7. git push -u origin master
+8. git config --get remote.origin.url- used to find the repositories available
+or git remote show origin
+or git remote -v
+
+#tags
+9. git tag - gives list of tags
+10. git tag -help - helps with tag commands
+11. git tag <tagname> - creates new tag
+12. git tag -a <tagname> -m "This is msg for tag" -can create tag with msg
+13. git tag -l "v2.*" - get list of tags with the same version
+14. git push origin <tagname>- push single tag
+14. git push origin --tags- push all tags to repository
+15. git log - shows all commits
+16. git tag -d <tagname> - delete frm system
+17. git push origin -d <tagname> - delete frm repo
+18. git push origin -d <multiple tagname>- delete multiple tags
+19. git tag <tagname> <commitid> - create tag with required commit id
+
+#works with files through terminal
+12. mkdir <foldername> - create new folder
+13. touch filename.fileextension - to create a new file frm terminal
+14. vi <filename>- open the file 
+15. i - to insert into the file
+16. Esc and type :wq!- To exit the file
