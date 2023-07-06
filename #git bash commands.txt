@@ -1,0 +1,10 @@
+#git bash
+
+1. cd 'downloads'- used to navigate to file directory
+2. git init - to initialize this file
+3. git status - gives the status of the files(tracked or untracked)in that folder
+4. git add .
+ or git add <file_name>
+5. git commit -m "Your custom message"
+6. git remote add origin <repo_link>
+7. git push -u origin master
