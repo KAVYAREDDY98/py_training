@@ -1,5 +1,6 @@
 django/shell installation and URL creation
 
+my
 django-admin startproject <project_name>
 python manage.py runserver
 crtl+c <- to stop the server
@@ -29,3 +30,36 @@ Working on url
 3. Add from . import views package to display things present in views.py
 if you run the server now you get error saying the url of project is not correct
 4. so include 'blog.urls.py' path in project url file
+
+#working on template
+
+So here we have a directory which contains html,css and javascript files. We need to integrate into code.
+1. Create a folder called 'templates' under the blog app
+2. Within templates to organize files create a folder called 'blogs' where we create some html files.
+3. So we create a foldername.htmlextension and type '<ht + tab' we automatically get the whole code. And add required html code.
+4. Now in the views file add the return render with path of new home.html file
+5. On the top remove HttpRequest as we are not writing any html code in python file.
+6. Now use the same url and the new view of html will be displayed.
+
+#Adding information manually(usually users enter the info)
+1. In views add a variable that stores>list>dictionories
+2. Now to access the above variable, in function request type context and call the above variable.
+3. if you type the url nothing can be seen
+4. We need to go to html code and say what, how we want to see the data.
+5. html cannot understand python so use {% %} [Here we are using for loop]
+6. We can change the title of the page as required for a file. Here we can write a code near <title> and give the title name in views.py for better usuage.
+
+# Now we will create a template using base.html
+1. So usually we have same lines of codes in different files. So we can use base.html to store same lines of code.
+2. And in body of base.html we can use any name to call the code in other files(like home and about).
+3. In home and about we need to add these lines of code-
+{% extends "blog/base.html" %}
+{% block content %} 
+{% endblock content %}
+4. Now the output will be same but the code is reduced. And changes and errors can be reduced too.
+
+# Now we need to use bootstrap for better alignment and size of words
+1. We are using bootstrap 4. We can go to the main website and copy the head and body code and paste it in the base.html  
+2. And it gives a better look
+
+
